@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UZE DEBS — Moda Feminina">
+  <title>UZE DEBS | Moda Feminina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <span>✦ Frete para todo o Brasil</span>
+    <span>✦ Parcelamento em até 12x no cartão</span>
+    <span>✦ 5% OFF no Pix</span>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="UZE DEBS">
+      <img src="assets/logo.png" alt="UZE DEBS Moda Feminina">
+    </a>
+
+    <nav class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="actions">
+      <button aria-label="Buscar" onclick="document.getElementById('busca').focus()">⌕</button>
+      <button aria-label="Carrinho" onclick="abrirCarrinho()">🛍</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">BELEZA · ESTILO · CONFIANÇA</p>
+        <h1>UZE DEBS</h1>
+        <p class="subtitle">Moda Feminina</p>
+        <p class="tagline">Mais que roupas, autoestima.</p>
+        <a class="button" href="#produtos">Conferir novidades →</a>
+        <div class="benefits">
+          <span>🚚 Entrega para todo Brasil</span>
+          <span>▣ Até 12x</span>
+          <span>♧ Compra segura</span>
+        </div>
+      </div>
+      <div class="hero-photo" aria-label="Banner da loja">
+        <div class="photo-placeholder">Sua foto de campanha entra aqui</div>
+      </div>
+    </section>
+
+    <section class="section" id="categorias">
+      <div class="section-title">
+        <span></span><h2>Compre por categoria</h2><span></span>
+      </div>
+      <div class="categories">
+        <a href="#produtos" onclick="filtrar('Roupas')"><div>👗</div><strong>Roupas</strong><small>Ver coleção →</small></a>
+        <a href="#produtos" onclick="filtrar('Calçados')"><div>👟</div><strong>Calçados</strong><small>Ver coleção →</small></a>
+        <a href="#produtos" onclick="filtrar('Acessórios')"><div>👜</div><strong>Acessórios</strong><small>Ver coleção →</small></a>
+        <a href="#produtos" onclick="filtrar('Outros')"><div>✨</div><strong>Outros</strong><small>Ver coleção →</small></a>
+      </div>
+    </section>
+
+    <section class="section products-section" id="produtos">
+      <div class="section-heading-row">
+        <div class="section-title left"><span></span><h2>Produtos em destaque</h2></div>
+        <input id="busca" class="search" type="search" placeholder="Buscar produto..." oninput="renderProdutos()">
+      </div>
+      <div id="filtroAtual" class="filter-label"></div>
+      <div class="products" id="products"></div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div>
+        <p class="eyebrow">SOBRE A UZE DEBS</p>
+        <h2>Vista-se de você.</h2>
+      </div>
+      <p>A UZE DEBS nasceu para valorizar a beleza, a confiança e o estilo de cada mulher. Aqui você encontra moda feminina escolhida com carinho para fazer você se sentir ainda mais você.</p>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="UZE DEBS">
+      <p>Moda Feminina</p>
+    </div>
+    <div>
+      <h3>NAVEGUE</h3>
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+    </div>
+    <div>
+      <h3>FALE CONOSCO</h3>
+      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:contato@uzedebs.com.br">E-mail</a>
+    </div>
+    <div class="footer-bottom">© 2026 UZE DEBS · Moda Feminina</div>
+  </footer>
+
+  <button class="whatsapp" onclick="abrirWhatsApp()" aria-label="Falar no WhatsApp">◔</button>
+
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" onclick="fecharCarrinho()">×</button>
+      <h2>Seu carrinho</h2>
+      <div id="cartItems"></div>
+      <div class="cart-total" id="cartTotal"></div>
+      <button class="button full" onclick="finalizarPedido()">Finalizar pelo WhatsApp</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
