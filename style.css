@@ -17,7 +17,7 @@ h1,h2{font-family:"Cormorant Garamond",serif;font-weight:500}
 h1{font-size:86px;line-height:.8;margin:0;color:var(--wine);letter-spacing:.02em}.subtitle{font-size:24px;letter-spacing:.28em;margin:18px 0 10px;color:var(--rose2)}.tagline{font-family:"Cormorant Garamond",serif;font-size:27px;margin:0 0 28px}
 .button{display:inline-flex;align-items:center;justify-content:center;background:var(--rose2);color:white;border:0;border-radius:28px;padding:15px 28px;font-size:12px;text-transform:uppercase;letter-spacing:.15em;cursor:pointer;max-width:300px}.button:hover{background:var(--wine)}
 .benefits{display:flex;gap:25px;border-top:1px solid #d4bbb6;margin-top:28px;padding-top:18px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#6e5759}
-.hero-photo{height:500px;overflow:hidden;background:linear-gradient(135deg,#dfc5ba,#f7e9d9)}
+.hero-photo{height:530px;overflow:hidden;background:linear-gradient(135deg,#dfc5ba,#f7e9d9)}
 .hero-photo img{width:100%;height:100%;display:block;object-fit:contain;object-position:center 30%}
 .photo-placeholder{width:80%;height:75%;border:1px dashed #b9908e;border-radius:6px;display:flex;align-items:center;justify-content:center;text-align:center;color:#956e6e;letter-spacing:.08em;font-size:13px}
 .section{padding:65px 6%}.section-title{display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:28px}.section-title span{height:1px;width:70px;background:var(--rose)}.section-title h2{font-size:32px;color:var(--wine);margin:0;text-transform:uppercase;letter-spacing:.08em}
